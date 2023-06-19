@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QR Image Generator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">QR Image Generator</h2>
+            <div class="form-group">
+              <label for="type">Select Type:</label>
+              <select class="form-control" id="type">
+                <option value="link">Link</option>
+                <option value="contact">Contact</option>
+              </select>
+            </div>
+            <div id="linkForm">
+              <div class="form-group">
+                <label for="link">Link:</label>
+                <input type="text" class="form-control" id="link" placeholder="Enter link">
+              </div>
+            </div>
+            <div id="contactForm" style="display: none;">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter name">
+              </div>
+              <div class="form-group">
+                <label for="surname">Surname:</label>
+                <input type="text" class="form-control" id="surname" placeholder="Enter surname">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="text" class="form-control" id="phone" placeholder="Enter phone number">
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary" id="generateBtn">Generate QR Code</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body text-center">
+            <img id="qrCodeImage" src="https://i.pinimg.com/originals/6b/67/cb/6b67cb8a166c0571c1290f205c513321.gif" width="128" height="128" class="animate__animated animate__fadeIn" alt="QR Code" style="display: none;">
+            <button type="button" class="btn btn-success mt-3" id="downloadBtn">Download QR Code</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
